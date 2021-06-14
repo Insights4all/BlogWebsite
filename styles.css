@@ -1,0 +1,131 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: aquamarine;
+  margin-top: 0%;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  padding: 15px;
+  color: black;
+}
+
+li a:hover {
+  background-color: black;
+  color: white;
+}
+.header {
+  margin-top: 0px;
+  height: 200px;
+
+  background-color: aquamarine;
+  text-align: center;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: aquamarine;
+  color: black;
+  text-align: center;
+}
+.registerbutton {
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.trendblog {
+  margin-left: 80px;
+}
+.hr {
+  width: 90%;
+}
+
+.trendingblogscontainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.eachblog {
+  padding: 55px;
+  background-color: white;
+  border: 1px solid black;
+  margin-left: 15px;
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 420px) {
+  ul {
+    background-color: aquamarine;
+    width: 400px;
+    margin: 0;
+    padding: 0;
+    margin-left: 0%;
+    overflow: hidden;
+  }
+  li {
+    float: left;
+    margin-left: 0;
+  }
+  li a {
+    display: block;
+    padding: 8px;
+    color: black;
+    font-size: 12px;
+  }
+
+  li a:hover {
+    background-color: black;
+    color: white;
+  }
+  .header {
+    margin-top: 0px;
+    height: 200px;
+    width: 400px;
+    font-size: 11px;
+    background-color: aquamarine;
+    text-align: center;
+  }
+  .registerbutton {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+  .trendblog {
+    margin-left: 18px;
+  }
+  .hr {
+    width: 90%;
+  }
+
+  .trendingblogscontainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .eachblog {
+    padding: 55px;
+    background-color: white;
+    border: 1px solid black;
+    margin-left: 15px;
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+  }
+}
