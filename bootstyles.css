@@ -1,0 +1,17 @@
+#blogimage {
+  width: 230px !important;
+}
+#eachblog {
+  width: 200px !important;
+  margin-top: 10px !important;
+}
+
+@media (max-width: 420px) {
+  #eachblog {
+    width: 250px !important;
+    margin-top: 10px !important;
+  }
+  #blogimage {
+    width: 290px !important;
+  }
+}
