@@ -84,6 +84,17 @@ label:hover {
   body {
     background-color: blue;
   }
+  #logo {
+    margin-left: 0;
+    margin-right: 0px;
+  }
+
+  #myblog:hover {
+    background-color: aquamarine;
+
+    color: black;
+    text-decoration: underline;
+  }
   ul {
     background-color: aquamarine;
     width: 400px;
@@ -106,51 +117,5 @@ label:hover {
   li a:hover {
     background-color: black;
     color: white;
-  }
-  .header {
-    margin-top: 0px;
-    height: 200px;
-    width: 400px;
-    font-size: 11px;
-    background-color: aquamarine;
-    text-align: center;
-  }
-  #logo {
-    margin-left: 0;
-    margin-right: 10px;
-  }
-
-  #myblog:hover {
-    background-color: aquamarine;
-    color: black;
-    text-decoration: underline;
-  }
-  .loginform {
-    border: 2px solid black;
-    border-radius: 2rem;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 30px;
-    padding: 10px;
-  }
-
-  .myform {
-    padding: 10px;
-    margin-top: 5px;
-  }
-  table,
-  tr,
-  td {
-    padding: 5px;
-  }
-  input {
-    width: 50px;
-    height: 10px;
-  }
-  input:focus {
-    background-color: lightblue;
-  }
-  label:hover {
-    color: blueviolet;
   }
 }
