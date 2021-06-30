@@ -49,13 +49,23 @@ if(empty($email)){
   $message2="Please Enter your email";
 }
 else{
+
   if(!preg_match("/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})*$/",$email))
   {
     $message2 ="Invalid Email Address";
+  
     
   }
   else{
+    $sql = "SELECT * FROM user WHERE useremail='".$email."' ";
+    $res =  $connection->query($sql) or die($connection->error);
+    $row = mysqli_num_rows($res) ;
+    if($row == 0){
     $validemail=$email;
+    }
+    else{
+      $message2="Email already exist";
+    }
   }
 }
 
@@ -82,8 +92,6 @@ else {
     header('Location: signup.html');
 }
 
-
-
 }
 
 }
@@ -96,8 +104,8 @@ else {
             <li ><a href="#">Blogs</a></li>
             <li ><a href="#">About</a></li>
             <li ><a href="#">Contact</a></li>
-            <li ><a href="login.html">Login</a></li>
-            <li ><a href="signup.html">Sign up</a></li>
+            <li ><a href="login.php">Login</a></li>
+            <li ><a href="signup2.php">Sign up</a></li>
         </ul>
        <br>
        <br>
