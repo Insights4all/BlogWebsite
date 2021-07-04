@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head></head>
-    <title>MyBlog</title>
+    <title>All Blogs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="css/blog.css">
   </head>
   <body>
   <?php session_start();
@@ -11,6 +11,8 @@
   $username = "root";
   $password = "";
   $dbname = "blog";
+  $count = 5;
+  
   
   $connection = mysqli_connect($servername, $username, $password, $dbname);
   
@@ -18,8 +20,10 @@
     die("Connection failed: " . $connection->connect_error);
   }
   else{
-  $sql = "SELECT * FROM addblog LIMIT 4";
+  $sql = "SELECT * FROM addblog";
   $res =  $connection->query($sql) or die($connection->error);
+  $data=mysqli_num_rows($res);
+  
   
 }
 
@@ -52,18 +56,30 @@
       </ul>
      <br>
      <br>
-     <h1>Read,Write and Share your Ideas</h1>
-
-     <a type="button" href="#"  class="registerbutton">Register</a>
       </div>
     
       <div>
-        <h3 class="trendblog">Trending Blogs</h3>
+        <h3 class="trendblog">All Blogs</h3>
         <hr class="hr">
 
-        <div class="trendingblogscontainer">
+        <?php
 
-        <?php while($row=$res->fetch_assoc()){ ?>
+
+        for ($x = 1; $x <= ceil($data/5); $x++) {  #3 rows
+
+        ?>
+         <div class="trendingblogscontainer">
+
+        <?php 
+        
+
+        for ($m = 1; $m <= $count; $m++) {   #5
+        
+
+        $row=$res->fetch_assoc() 
+        
+        ?>
+
           
 
           <div class="eachblog">
@@ -83,12 +99,22 @@
               <small class="authorname">May 30</small>
             </p>
             <a class="readmore" href="#">Read More</a>
-
+        
           </div>
-          <?php }?>
-          
+          <?php }
+          $count = $data -$count;   
+          if ($count > 5) {
+              $count = 5;
+          }
+          ?>
 
+          
+          
+          
         </div>
+        <?php } ?>
+
+          
 
       </div>
     

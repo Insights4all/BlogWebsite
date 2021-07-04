@@ -1,0 +1,97 @@
+#logo {
+  margin-left: 0;
+  margin-right: 750px;
+}
+
+#myblog:hover {
+  background-color: aquamarine;
+
+  color: black;
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: aquamarine;
+  height: 45px;
+  margin-top: 0%;
+  float: right;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  padding: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: black;
+  color: white;
+}
+.header {
+  margin-top: 0px;
+  height: 45px;
+
+  background-color: aquamarine;
+  text-align: center;
+}
+
+.trendingblogscontainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 20px;
+}
+.eachblog {
+  background-color: white;
+  border: 1px solid black;
+  margin-left: 15px;
+  width: 200px;
+  height: 250px;
+}
+.blogimage {
+  width: 100%;
+  height: 50%;
+}
+.blogtitle {
+  text-decoration: none;
+  color: black;
+  padding: 0px;
+  font-family: "Garamond";
+  font-size: 20px;
+}
+.blogtitle2 {
+  margin-left: 10px;
+  margin-top: 3px;
+  margin-bottom: auto;
+}
+.authorname {
+  margin-left: 10px;
+  margin-top: auto;
+  color: black;
+  font-family: Arial;
+  font-size: 15px;
+}
+.readmore {
+  margin-left: 10px;
+  color: black;
+}
+.readmore:hover {
+  color: blue;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: aquamarine;
+  color: black;
+  text-align: center;
+}
