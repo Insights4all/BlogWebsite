@@ -1,0 +1,31 @@
+#blogimage {
+  width: 230px !important;
+  height: 150px !important;
+}
+#eachblog {
+  width: 200px !important;
+  margin-top: 10px !important;
+}
+#logincontainer {
+  margin-top: 120px;
+  margin-left: 250px;
+  margin-right: 250px;
+  width: 500px !important;
+}
+
+@media (max-width: 420px) {
+  #eachblog {
+    width: 250px !important;
+    margin-top: 10px !important;
+  }
+  #blogimage {
+    width: 290px !important;
+    height: 150px !important;
+  }
+  #logincontainer {
+    margin-top: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 380px !important;
+  }
+}
